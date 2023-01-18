@@ -6,6 +6,10 @@ pipeline {
             steps{
                
            sh 'zip middlewareScript-${BUILD_NUMBER}.zip *  --exclude Jenkinsfile README.md '  
+           stage("deploy"){
+            steps{
+                echo "deploy"
+            }
             
             }
         }
